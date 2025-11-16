@@ -145,19 +145,19 @@
   ],
   "skills": [
     {
-      "name": "Python, Java, C",
+      "name": "Python, Java, C, Django",
       "proficiency": 75,
       "proficiency_label": "Intermediate"
     },
     {
-      "name": "HTML, CSS, Django",
-      "proficiency": 75,
-      "proficiency_label": "Intermediate"
-    },
-    {
-      "name": "JavaScript, Spring",
+      "name": "Spring, HTML, CSS",
       "proficiency": 30,
       "proficiency_label": "Beginner"
+    },
+    {
+      "name": "JavaScript, C++",
+      "proficiency": 10,
+      "proficiency_label": "Can use"
     }
   ],
   "interests": [

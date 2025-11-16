@@ -109,31 +109,6 @@
     <div class="page-content">
       <div class="container">
         <main>
-          {% if work_experience %}
-            <section>
-              <h2 class="section-heading">Work Experience</h2>
-              {% for job in work_experience %}
-                <section>
-                  <h3>
-                    {% if job.url %}
-                      {{ job.position }} at <a href="{{ job.url }}">{{ job.company }}</a>
-                    {% else %}
-                      {{ job.position }} at {{ job.company }}
-                    {% endif %}
-                  </h3>
-                  {% if job.start_date and job.end_date %}
-                    <p class="section-label">{{ job.start_date }} - {{ job.end_date }}</p>
-                  {% endif %}
-                  {% if job.summary %}<p>{{ job.summary }}</p>{% endif %}
-                  {% if job.highlights %}
-                    <ul>
-                      {% for highlight in job.highlights %}<li>{{ highlight }}</li>{% endfor %}
-                    </ul>
-                  {% endif %}
-                </section>
-              {% endfor %}
-            </section>
-          {% endif %}
 
           {% if projects %}
             <section>
@@ -171,6 +146,33 @@
             </section>
           {% endif %}
 
+          {% if 
+            experience %}
+            <section>
+              <h2 class="section-heading">Experience</h2>
+              {% for job in experience %}
+                <section>
+                  <h3>
+                    {% if job.url %}
+                      <a href="{{ job.url }}">{{ job.name }}</a> | {{ job.type }}
+                    {% else %}
+                      {{ job.name }} | {{ job.type }} 
+                    {% endif %}
+                  </h3>
+                  {% if job.start_date and job.end_date %}
+                    <p class="section-label">{{ job.start_date }} - {{ job.end_date }}</p>
+                  {% endif %}
+                  {% if job.summary %}<p>{{ job.summary }}</p>{% endif %}
+                  {% if job.highlights %}
+                    <ul>
+                      {% for highlight in job.highlights %}<li>{{ highlight }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
+                </section>
+              {% endfor %}
+            </section>
+          {% endif %}
+
           {% if volunteer_experience %}
             <section>
               <h2 class="section-heading">Volunteer Experience</h2>
@@ -178,9 +180,9 @@
                 <section>
                   <h3>
                     {% if vol.url %}
-                      {{ vol.position }} at <a href="{{ vol.url }}">{{ vol.organization }}</a>
+                      {{ vol.type }} at <a href="{{ vol.url }}">{{ vol.organization }}</a>
                     {% else %}
-                      {{ vol.position }} at {{ vol.organization }}
+                      {{ vol.type }} at {{ vol.organization }}
                     {% endif %}
                   </h3>
                   {% if vol.start_date and vol.end_date %}
@@ -231,7 +233,7 @@
                   </h3>
                   {% if edu.location %}<p class="section-label">{{ edu.location }}</p>{% endif %}
                   {% if edu.degrees %}
-                    <h4>Degrees</h4>
+                    <h4>Major</h4>
                     <ul>
                       {% for deg in edu.degrees %}<li>{{ deg }}</li>{% endfor %}
                     </ul>

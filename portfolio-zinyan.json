@@ -1,0 +1,187 @@
+{
+  "name": "Zin Wai Yan | 진웨이얀",
+  "label": "Ewha Womans University",
+  "image_path": "portfolio_media/profile.jpg",
+  "contact": {
+    "email": "zinwaiyan2226@gmail.com",
+    "phone": "",
+    "location": "Seoul, South Korea"
+  },
+  "summary": "열심히 배우는 중",
+  "url": "",
+  "social_links": [
+    {
+      "label": "Github",
+      "url": "https://github.com/ZinYan",
+      "svg_path": "img/github.svg"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Moodico | 무디코",
+      "summary": "나만의 컬러와 무드에 맞춘 메이크업 제품을 한눈에 추천해주는 웹 서비스 ",
+      "url": "https://github.com/pirogramming/Moodico",
+      "highlights": [
+        "팀원 : 총 5명",
+        "역할 : BE | 백엔드", 
+        "Skills used: Python, Django, SQLite, Nginx, Gunicorn, Selenium, Github Actions",
+        "맡았던 부분 : 배포, 회원가입 및 일반 로그인 + 소셜 로그인(카카오), 데이터 크롤링, 아이템 이미지 기반 추천 기능, 인기상품 추천 기능, 오늘의 추천 카드 기능"
+      ],
+      "images": [
+        {
+          "img_path": "portfolio_media/moodico_main.png",
+          "caption": "메인 페이지"
+        },
+        {
+          "img_path": "portfolio_media/item_based_recommendation.png",
+          "caption": "아이템 기반 추천"
+        },
+        {
+          "img_path": "portfolio_media/matrix_based.png",
+          "caption": "색상 매트릭스"
+        },
+        {
+          "img_path": "portfolio_media/detail_page.png",
+          "caption": "아이템 상세 페이지"
+        },
+        {
+          "img_path": "portfolio_media/popularity_ranking.png",
+          "caption": "인기 상품 추천"
+        },
+        {
+          "img_path": "portfolio_media/user_profile.png",
+          "caption": "사용자 프로필"
+        }
+      ]
+    },
+    {
+      "title": "EURONimals",
+      "summary": "PetFinder.my 플랫폼에 등록된 유기동물의 입양 속도/가능성을 예측하는 머신러닝 모델 개발",
+      "highlights": [
+        "팀원 : 총 4명",
+        "역할 : 팀장", 
+        "Skills used: Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn",
+        "맡았던 부분 : 데이터 전처리 및 EDA, 피처 엔지니어링 및 모델링, 모델 튜닝 및 분석(LightGBM), 최종 분석, 시각화, Django폼 만들기"
+      ],
+      "images": [
+        {
+          "img_path": "portfolio_media/euronimals1.png",
+          "caption": "Django 폼"
+        },
+        {
+          "img_path": "portfolio_media/euronimals2.png",
+          "caption": "입양 속도 예측"
+        },
+        {
+          "img_path": "portfolio_media/euronimals3.png",
+          "caption": "입양 속도별 예측 확률"
+        }
+
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "name": "EDOC(이독)",
+      "type": "알고리즘 동아리",
+      "start_date": "2024-09",
+      "end_date": "2025-08",
+      "summary": "",
+      "highlights": [
+      ]
+    },
+    {
+      "name": "EURON(유런)",
+      "type": "인공지능 동아리 (ML 세션)",
+      "start_date": "2025-03",
+      "end_date": "2025-08",
+      "summary": "",
+      "highlights": [
+      ]
+    },
+    {
+      "name": "Pirogramming(파로그래밍)",
+      "type": "웹 개발 동아리",
+      "start_date": "2025-06",
+      "end_date": "2025-08",
+      "summary": "",
+      "highlights": [
+      ]
+    },
+    {
+      "name": "EURON(유런)",
+      "type": "인공지능 동아리 (DL 세션)",
+      "start_date": "2025-09",
+      "end_date": "~",
+      "summary": "",
+      "highlights": [
+      ]
+    },
+    {
+      "name": "GDGoC Ewha",
+      "type": "Google Developer Groups on Campus",
+      "start_date": "2025-09",
+      "end_date": "~",
+      "summary": "",
+      "highlights": [
+      ]
+    }
+    
+  ],
+  "education": [
+    {
+      "institution": "Ewha Womans University",
+      "location": "Seoul, South Korea",
+      "url": "https://ewha.ac.kr",
+      "degrees": [
+        "인공지능대학 컴퓨터공학과"
+      ],
+      "honors": [
+      ],
+      "gpa_cumulative": "",
+      "gpa_major": "",
+      "graduation_date": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python, Java, C",
+      "proficiency": 75,
+      "proficiency_label": "Intermediate"
+    },
+    {
+      "name": "HTML, CSS, Django",
+      "proficiency": 75,
+      "proficiency_label": "Intermediate"
+    },
+    {
+      "name": "JavaScript, Spring",
+      "proficiency": 30,
+      "proficiency_label": "Beginner"
+    }
+  ],
+  "interests": [
+    {
+      "name": "예능 보기",
+      "summary": "",
+      "images": [
+        {
+          "img_path": "portfolio_media/running_man.png",
+          "caption": "나의 가족들"
+        }
+      ]
+    },
+    {
+      "name": "음악 듣기",
+      "summary": "",
+      "images": [
+        {
+          "img_path": "portfolio_media/supermarket_flowers.png",
+          "caption": "Supermarket Flowers - Ed Sheeran"
+        }
+      ]
+    }
+  ],
+  "languages": [],
+  "references": []
+}

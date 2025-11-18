@@ -84,6 +84,7 @@
     {
       "name": "EDOC(이독)",
       "type": "알고리즘 동아리",
+      "url": "https://www.instagram.com/ewha_edoc?igsh=MTJzbm9vZ3NydjlnNw==",
       "start_date": "2024-09",
       "end_date": "2025-08",
       "summary": "",
@@ -93,6 +94,7 @@
     {
       "name": "EURON(유런)",
       "type": "인공지능 동아리 (ML 세션)",
+      "url": "https://www.instagram.com/euronewha_official?igsh=MW04cmZrdXU3cmtndg==",
       "start_date": "2025-03",
       "end_date": "2025-08",
       "summary": "",
@@ -102,6 +104,7 @@
     {
       "name": "Pirogramming(파로그래밍)",
       "type": "웹 개발 동아리",
+      "url": "https://www.instagram.com/pirogramming_official?igsh=djZkaHlrbmgxb2du",
       "start_date": "2025-06",
       "end_date": "2025-08",
       "summary": "",
@@ -111,8 +114,9 @@
     {
       "name": "EURON(유런)",
       "type": "인공지능 동아리 (DL 세션)",
+      "url": "https://www.instagram.com/euronewha_official?igsh=MW04cmZrdXU3cmtndg==",
       "start_date": "2025-09",
-      "end_date": "~",
+      "end_date": " ",
       "summary": "",
       "highlights": [
       ]
@@ -120,8 +124,9 @@
     {
       "name": "GDGoC Ewha",
       "type": "Google Developer Groups on Campus",
+      "url": "https://www.instagram.com/gdg.ewha?igsh=ZzJtMmdzamJ3aWVy",
       "start_date": "2025-09",
-      "end_date": "~",
+      "end_date": " ",
       "summary": "",
       "highlights": [
       ]

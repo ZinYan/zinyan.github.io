@@ -150,8 +150,13 @@
   ],
   "skills": [
     {
-      "name": "Python, Java, C, Django",
-      "proficiency": 75,
+      "name": "Python",
+      "proficiency": 80,
+      "proficiency_label": "Advanced"
+    },
+    {
+      "name": "Java, C, Django",
+      "proficiency": 60,
       "proficiency_label": "Intermediate"
     },
     {

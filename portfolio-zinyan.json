@@ -179,28 +179,6 @@
       "proficiency_label": "Can use"
     }
   ],
-  "interests": [
-    {
-      "name": "예능 보기",
-      "summary": "",
-      "images": [
-        {
-          "img_path": "portfolio_media/running_man.png",
-          "caption": "런닝맨"
-        }
-      ]
-    },
-    {
-      "name": "음악 듣기",
-      "summary": "",
-      "images": [
-        {
-          "img_path": "portfolio_media/supermarket_flowers.png",
-          "caption": "Supermarket Flowers - Ed Sheeran"
-        }
-      ]
-    }
-  ],
   "languages": [],
   "references": []
 }

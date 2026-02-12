@@ -164,12 +164,12 @@
       "proficiency_label": "Advanced"
     },
     {
-      "name": "Java, C, Django",
+      "name": "Java, Django",
       "proficiency": 60,
       "proficiency_label": "Intermediate"
     },
     {
-      "name": "Spring, HTML, CSS",
+      "name": "Spring, C, HTML, CSS",
       "proficiency": 30,
       "proficiency_label": "Beginner"
     },

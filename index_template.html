@@ -292,30 +292,6 @@
             </section>
           {% endif %}
 
-          {% if interests %}
-            <section>
-              <h2 class="section-heading">Interests</h2>
-              {% for interest in interests %}
-                <section>
-                  <h3>{{ interest.name }}</h3>
-                  {% if interest.summary %}<p>{{ interest.summary }}</p>{% endif %}
-                  {% if interest.images %}
-                    <div class="gallery side-gallery">
-                      {% for img in interest.images %}
-                        <figure>
-                          <img width="600"
-                               height="338"
-                               src="{{ img.img_path }}"
-                               alt="{{ img.caption }}">
-                          <figcaption>{{ img.caption }}</figcaption>
-                        </figure>
-                      {% endfor %}
-                    </div>
-                  {% endif %}
-                </section>
-              {% endfor %}
-            </section>
-          {% endif %}
         </aside>
       </div>
     </div>

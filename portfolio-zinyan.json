@@ -1,7 +1,7 @@
 {
   "name": "Zin Wai Yan | 진웨이얀",
   "label": "Ewha Womans University",
-  "image_path": "portfolio_media/profile.jpg",
+  "image_path": "portfolio_media/profile.jpg?v=3",
   "contact": {
     "email": "zinwaiyan2226@gmail.com",
     "phone": "",
@@ -56,6 +56,7 @@
     },
     {
       "title": "NeuralTimes",
+      "gallery_class": "neuraltimes-gallery",
       "summary": "AI 기반 뉴스 편향성 분석·요약 서비스 : AI 모델을 통해 뉴스를 (1) 주관성 탐지 (2) 진보/보수적 성향 분류 (3) 요약 텍스트 로 분석하여 사용자가 기사의 편향성을 스스로 판단할 수 있는 정량적 지표를 제시",
       "highlights": [
         "팀원 : 총 4명",
@@ -97,6 +98,37 @@
           "caption": "입양 속도별 예측 확률"
         }
       ]
+    },
+    {
+      "title": "SoundSight | Google Solution Challenge 2026",
+      "summary": "영상의 시각 정보, 오디오 특성, 자막을 AI로 분석해 청각적 감정을 시각 효과와 진동으로 전달하는 청각장애인 접근성 서비스",
+      "url": "https://github.com/ZinYan/2026-SolutionChallenge",
+      "gallery_class": "soundsight-gallery",
+      "highlights": [
+        "팀원 : 총 4명",
+        "역할 : Backend",
+        "Skills used: Python, Docker, Django REST Framework, Celery, yt-dlp, FFmpeg"
+      ],
+      "contributions": [
+        "개발 환경의 일관성을 위한 Python 의존성 및 Docker 설정",
+        "Django 프로젝트 초기화 및 REST API 스켈레톤 구현: /api/analyze, /api/status, /api/result",
+        "YouTube URL 입력부터 WAV 다운로드 및 구간 분할까지의 오디오 추출 파이프라인 구현",
+        "영상 업로드 → 작업 큐 → AI 파이프라인 호출 → 결과 저장으로 이어지는 비동기 백그라운드 처리 구현"
+      ],
+      "images": [
+        {
+          "img_path": "portfolio_media/soundsight_01.jpg",
+          "caption": "URL 입력 화면"
+        },
+        {
+          "img_path": "portfolio_media/soundsight_02.jpg",
+          "caption": "분석 진행 화면"
+        },
+        {
+          "img_path": "portfolio_media/soundsight_04.jpg",
+          "caption": "배경 비네팅으로 감정을 시각화한 영상 재생 화면"
+        }
+      ]
     }
   ],
   "experience": [
@@ -106,6 +138,7 @@
       "url": "https://www.instagram.com/ewha_edoc?igsh=MTJzbm9vZ3NydjlnNw==",
       "start_date": "2024-09",
       "end_date": "2025-08",
+      "duration": "약 1년",
       "summary": "",
       "highlights": [
       ]
@@ -116,6 +149,7 @@
       "url": "https://www.instagram.com/euronewha_official?igsh=MW04cmZrdXU3cmtndg==",
       "start_date": "2025-03",
       "end_date": "2025-08",
+      "duration": "6개월",
       "summary": "",
       "highlights": [
       ]
@@ -126,6 +160,7 @@
       "url": "https://www.instagram.com/pirogramming_official?igsh=djZkaHlrbmgxb2du",
       "start_date": "2025-06",
       "end_date": "2025-08",
+      "duration": "3개월",
       "summary": "",
       "highlights": [
       ]
@@ -136,6 +171,7 @@
       "url": "https://www.instagram.com/euronewha_official?igsh=MW04cmZrdXU3cmtndg==",
       "start_date": "2025-09",
       "end_date": "2026-02",
+      "duration": "6개월",
       "summary": "",
       "highlights": [
       ]
@@ -145,7 +181,8 @@
       "url": "https://www.instagram.com/pirogramming_official?igsh=djZkaHlrbmgxb2du",
       "type": "웹 개발 동아리",
       "start_date": "2025-09",
-      "end_date": "2025-02",
+      "end_date": "2026-02",
+      "duration": "6개월",
       "summary": "",
       "highlights": [
       ]
@@ -155,7 +192,39 @@
       "type": "Google Developer Groups on Campus",
       "url": "https://www.instagram.com/gdg.ewha?igsh=ZzJtMmdzamJ3aWVy",
       "start_date": "2025-09",
-      "end_date": " ",
+      "end_date": "2026-06",
+      "duration": "10개월",
+      "summary": "",
+      "highlights": [
+      ]
+    },
+    {
+      "name": "EURON(유런) 회장",
+      "type": "인공지능 동아리",
+      "url": "https://www.instagram.com/euronewha_official?igsh=MW04cmZrdXU3cmtndg==",
+      "start_date": "2026-01",
+      "end_date": "2026-08",
+      "duration": "8개월",
+      "summary": "",
+      "highlights": [
+      ]
+    },
+    {
+      "name": "EFUB",
+      "type": "웹 개발 동아리",
+      "url": "https://www.instagram.com/ewha_efub?igsh=MW8yaXp4cGxzem56ag==",
+      "start_date": "2026-03",
+      "end_date": "현재",
+      "summary": "",
+      "highlights": [
+      ]
+    },
+    {
+      "name": "GDGoC Ewha Lead",
+      "type": "Google Developer Groups on Campus Ewha",
+      "url": "https://www.instagram.com/gdg.ewha?igsh=ZzJtMmdzamJ3aWVy",
+      "start_date": "2026-07",
+      "end_date": "현재",
       "summary": "",
       "highlights": [
       ]
@@ -166,8 +235,10 @@
       "institution": "Ewha Womans University",
       "location": "Seoul, South Korea",
       "url": "https://ewha.ac.kr",
+      "start_date": "2024-03",
+      "end_date": "Present",
       "degrees": [
-        "Computer Science and Engineering undergraduate : (2024-03 - )"
+        "Computer Science and Engineering (Undergraduate)"
       ],
       "honors": [
       ],
@@ -178,24 +249,24 @@
   ],
   "skills": [
     {
-      "name": "Python",
-      "proficiency": 80,
-      "proficiency_label": "Advanced"
+      "name": "Languages",
+      "items": ["Python", "Java", "JavaScript", "C", "C++"]
     },
     {
-      "name": "Java, Django",
-      "proficiency": 60,
-      "proficiency_label": "Intermediate"
+      "name": "Backend",
+      "items": ["Django", "Spring", "Gunicorn"]
     },
     {
-      "name": "Spring, C, HTML, CSS",
-      "proficiency": 30,
-      "proficiency_label": "Beginner"
+      "name": "Frontend",
+      "items": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "JavaScript, C++",
-      "proficiency": 10,
-      "proficiency_label": "Can use"
+      "name": "Data & ML",
+      "items": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"]
+    },
+    {
+      "name": "Database & Tools",
+      "items": ["SQLite", "Nginx", "Selenium", "GitHub Actions"]
     }
   ],
   "languages": [

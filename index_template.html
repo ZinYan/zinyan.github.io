@@ -35,7 +35,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/modern_normalize.css" />
     <link rel="stylesheet" href="css/html5bp.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css?v=10">
 
     <!-- Set a theme color that matches your website's primary color -->
     <meta name="theme-color" content="#fafafa">
@@ -111,10 +111,10 @@
         <main>
 
           {% if projects %}
-            <section>
+            <section class="projects-section">
               <h2 class="section-heading">Projects</h2>
               {% for project in projects %}
-                <section>
+                <article class="project-card">
                   <h3>
                     {% if project.url %}
                       <a href="{{ project.url }}">{{ project.title }}</a>
@@ -128,8 +128,27 @@
                       {% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}
                     </ul>
                   {% endif %}
+                  {% if project.contributions %}
+                    <h4 class="project-subheading">맡았던 부분</h4>
+                    <ul>
+                      {% for contribution in project.contributions %}<li>{{ contribution }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
+                  {% if project.videos %}
+                    <div class="project-videos">
+                      {% for video in project.videos %}
+                        <figure>
+                          <video class="project-video" controls preload="metadata" playsinline>
+                            <source src="{{ video.video_path }}" type="video/mp4">
+                            Your browser does not support embedded videos.
+                          </video>
+                          <figcaption>{{ video.caption }}</figcaption>
+                        </figure>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
                   {% if project.images %}
-                    <div class="gallery main-gallery">
+                    <div class="gallery main-gallery {{ project.gallery_class|default('') }}">
                       {% for img in project.images %}
                         <figure>
                           <img width="600"
@@ -141,34 +160,34 @@
                       {% endfor %}
                     </div>
                   {% endif %}
-                </section>
+                </article>
               {% endfor %}
             </section>
           {% endif %}
 
           {% if 
             experience %}
-            <section>
+            <section class="experience-section">
               <h2 class="section-heading">Experience</h2>
-              {% for job in experience %}
-                <section>
-                  <h3>
-                    {% if job.url %}
-                      <a href="{{ job.url }}">{{ job.name }}</a> | {{ job.type }}
-                    {% else %}
-                      {{ job.name }} | {{ job.type }} 
+              {% for job in experience|sort(attribute='start_date', reverse=true) %}
+                <article class="experience-item">
+                  <div class="experience-period">
+                    {{ job.start_date }}{% if job.end_date %} – {{ job.end_date }}{% else %} ~{% endif %}
+                    {% if job.duration %}<span class="duration-badge">{{ job.duration }}</span>{% endif %}
+                  </div>
+                  <div class="experience-details">
+                    <h3>
+                      {% if job.url %}<a href="{{ job.url }}">{{ job.name }}</a>{% else %}{{ job.name }}{% endif %}
+                    </h3>
+                    {% if job.type %}<p class="experience-type">{{ job.type }}</p>{% endif %}
+                    {% if job.summary %}<p>{{ job.summary }}</p>{% endif %}
+                    {% if job.highlights %}
+                      <ul>
+                        {% for highlight in job.highlights %}<li>{{ highlight }}</li>{% endfor %}
+                      </ul>
                     {% endif %}
-                  </h3>
-                  {% if job.start_date and job.end_date %}
-                    <p class="section-label">{{ job.start_date }} - {{ job.end_date }}</p>
-                  {% endif %}
-                  {% if job.summary %}<p>{{ job.summary }}</p>{% endif %}
-                  {% if job.highlights %}
-                    <ul>
-                      {% for highlight in job.highlights %}<li>{{ highlight }}</li>{% endfor %}
-                    </ul>
-                  {% endif %}
-                </section>
+                  </div>
+                </article>
               {% endfor %}
             </section>
           {% endif %}
@@ -220,24 +239,17 @@
         <!-- Sidebar Section -->
         <aside>
           {% if education %}
-            <section>
+            <section class="education-section">
               <h2 class="section-heading">Education</h2>
               {% for edu in education %}
-                <section>
-                  <h3>
-                    {% if edu.url %}
-                      <a href="{{ edu.url }}">{{ edu.institution }}</a>
-                    {% else %}
-                      {{ edu.institution }}
-                    {% endif %}
-                  </h3>
-                  {% if edu.location %}<p class="section-label">{{ edu.location }}</p>{% endif %}
-                  {% if edu.degrees %}
-                    <h4>Major</h4>
-                    <ul>
-                      {% for deg in edu.degrees %}<li>{{ deg }}</li>{% endfor %}
-                    </ul>
-                  {% endif %}
+                <article class="education-item">
+                  <div class="education-period">{{ edu.start_date }}{% if edu.end_date %} – {{ edu.end_date }}{% endif %}</div>
+                  <div class="education-details">
+                    <h3>
+                      {% if edu.url %}<a href="{{ edu.url }}">{{ edu.institution }}</a>{% else %}{{ edu.institution }}{% endif %}
+                    </h3>
+                    {% for deg in edu.degrees %}<p class="education-degree">{{ deg }}</p>{% endfor %}
+                    {% if edu.location %}<p class="education-location">{{ edu.location }}</p>{% endif %}
                   {% if edu.honors %}
                     <h4>Honors</h4>
                     <ul>
@@ -251,44 +263,39 @@
                       {% if edu.graduation_date %}<span class="block">Graduation Date: {{ edu.graduation_date }}</span>{% endif %}
                     </p>
                   {% endif %}
-                </section>
+                  </div>
+                </article>
               {% endfor %}
             </section>
           {% endif %}
 
           {% if skills %}
-            <section>
-              <h2 class="section-heading">Skills</h2>
-              <ul class="unstyled-list">
+            <section class="skills-section">
+              <h2 class="section-heading">Skills &amp; Expertise</h2>
+              <div class="skills-grid">
                 {% for skill in skills %}
-                  <li>
+                  <article class="skill-card">
                     <h3>{{ skill.name }}</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill w-{{ skill.proficiency }}"
-                           role="meter"
-                           aria-valuenow="{{ skill.proficiency }}"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">{{ skill.proficiency_label }}</span>
-                      </div>
+                    <div class="skill-tags">
+                      {% for item in skill['items'] %}<span class="skill-tag">{{ item }}</span>{% endfor %}
                     </div>
-                  </li>
+                  </article>
                 {% endfor %}
-              </ul>
+              </div>
             </section>
           {% endif %}
 
           {% if languages %}
-            <section>
+            <section class="languages-section">
               <h2 class="section-heading">Languages</h2>
-              <ul class="unstyled-list">
+              <div class="languages-list">
                 {% for lang in languages %}
-                  <li>
+                  <article class="language-item">
                     <h3>{{ lang.language }}</h3>
-                    <p class="section-label">{{ lang.fluency }}</p>
-                  </li>
+                    <p>{{ lang.fluency }}</p>
+                  </article>
                 {% endfor %}
-              </ul>
+              </div>
             </section>
           {% endif %}
 

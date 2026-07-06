@@ -218,10 +218,274 @@ aside .section-heading::after {
 }
 
 .section-label {
+  font-family: inherit;
   font-size: 0.9rem;
   color: #444;
+  font-weight: 400;
+}
+
+.section-label {
   margin-top: 0.25rem;
   margin-bottom: 0.5rem;
+}
+
+.experience-section > .section-heading,
+.skills-section > .section-heading {
+  display: block;
+  margin-bottom: 1.5rem;
+  padding: 0 0 0.45rem;
+  border: 0;
+  border-bottom: 2px solid #54d6ae;
+  text-align: left;
+}
+
+.experience-section > .section-heading::before,
+.experience-section > .section-heading::after,
+.skills-section > .section-heading::before,
+.skills-section > .section-heading::after {
+  content: none;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.85fr) minmax(0, 1.65fr);
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+
+.experience-period {
+  color: #687386;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.experience-period .duration-badge {
+  display: table;
+  margin: 0.35rem 0 0;
+  font-family: inherit;
+}
+
+.experience-details h3 {
+  margin: 0 0 0.2rem;
+}
+
+.experience-type {
+  margin: 0;
+  color: #687386;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.education-section .section-heading,
+.languages-section .section-heading {
+  display: block;
+  margin-bottom: 1.25rem;
+  padding: 0 0 0.45rem;
+  border: 0;
+  border-bottom: 2px solid #54d6ae;
+  text-align: left;
+}
+
+.education-section .section-heading::before,
+.education-section .section-heading::after,
+.languages-section .section-heading::before,
+.languages-section .section-heading::after {
+  content: none;
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.8fr) minmax(0, 1.4fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.education-period {
+  color: #687386;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.education-details h3 {
+  margin: 0 0 0.25rem;
+}
+
+.education-degree,
+.education-location {
+  margin: 0.15rem 0 0;
+  color: #687386;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.education-location {
+  font-size: 0.8rem;
+}
+
+.projects-section > .section-heading {
+  display: block;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid #54d6ae;
+  text-align: left;
+}
+
+.projects-section > .section-heading::before,
+.projects-section > .section-heading::after {
+  content: none;
+}
+
+.project-card {
+  margin-bottom: 1.5rem;
+  padding: 1.35rem;
+  border: 1px solid #d9e1ea;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(30, 41, 59, 0.06);
+}
+
+.project-card > h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.project-card > p {
+  margin-top: 0;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.project-card > ul {
+  margin-bottom: 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.project-card > ul li {
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+}
+
+.project-subheading {
+  margin: 1rem 0 0.35rem;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.project-videos {
+  display: grid;
+  place-items: center;
+  margin-top: 1rem;
+}
+
+.project-videos figure {
+  width: min(100%, 420px);
+}
+
+.project-video {
+  display: block;
+  width: 100%;
+  max-height: 620px;
+  border-radius: 10px;
+  background: #111827;
+}
+
+.main-gallery.soundsight-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.soundsight-gallery img {
+  max-height: 560px;
+  object-fit: contain;
+}
+
+.soundsight-gallery figure:last-child {
+  grid-column: 1 / -1;
+}
+
+.main-gallery.neuraltimes-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.neuraltimes-gallery img {
+  width: 100%;
+  max-height: 460px;
+  object-fit: contain;
+  border: 1px solid #d9e1ea;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .main-gallery.neuraltimes-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-gallery.soundsight-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.languages-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.language-item {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.8fr) minmax(0, 1.4fr);
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.language-item h3,
+.language-item p {
+  margin: 0;
+}
+
+.language-item p {
+  color: #687386;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.duration-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background-color: #e5f5ef;
+  color: #176b55;
+  font-size: 0.75rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-period {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 420px) {
+  .education-item,
+  .language-item {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
 }
 
 /* Images */
@@ -280,7 +544,55 @@ aside li {
   display: flex; /* This is for HTML Whitespace Issues */
 }
 
-/* Skillbars */
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  min-height: 9rem;
+  padding: 1.25rem;
+  border: 1px solid #d9e1ea;
+  border-radius: 12px;
+  background: #f8fafc;
+  box-shadow: 0 4px 14px rgba(30, 41, 59, 0.05);
+}
+
+.skill-card h3 {
+  margin: 0 0 1rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: #e5f5ef;
+  color: #176b55;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    min-height: auto;
+  }
+}
+
+/* Legacy skillbars */
 .skill-bar {
   width: 100%;
   height: 1.5rem;

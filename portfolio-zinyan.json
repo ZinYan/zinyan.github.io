@@ -14,6 +14,11 @@
       "label": "Github",
       "url": "https://github.com/ZinYan",
       "svg_path": "img/github.svg"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/zin-wai-yan-c0zy26022002/",
+      "svg_path": "img/linkedin.svg"
     }
   ],
   "projects": [

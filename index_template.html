@@ -134,11 +134,17 @@
                       {% for contribution in project.contributions %}<li>{{ contribution }}</li>{% endfor %}
                     </ul>
                   {% endif %}
+                  {% if project.improvements %}
+                    <h4 class="project-subheading">주요 개선</h4>
+                    <ul>
+                      {% for improvement in project.improvements %}<li>{{ improvement }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
                   {% if project.videos %}
                     <div class="project-videos">
                       {% for video in project.videos %}
-                        <figure>
-                          <video class="project-video" controls preload="metadata" playsinline>
+                        <figure{% if video.wide %} class="project-video-wide"{% endif %}>
+                          <video class="project-video" controls preload="metadata" playsinline{% if video.poster %} poster="{{ video.poster }}"{% endif %}>
                             <source src="{{ video.video_path }}" type="video/mp4">
                             Your browser does not support embedded videos.
                           </video>
@@ -264,6 +270,21 @@
                     </p>
                   {% endif %}
                   </div>
+                </article>
+              {% endfor %}
+            </section>
+          {% endif %}
+
+          {% if certifications %}
+            <section class="certifications-section">
+              <h2 class="section-heading">Certifications</h2>
+              {% for cert in certifications %}
+                <article class="certification-item">
+                  <h3>{{ cert.name }}</h3>
+                  <p>{{ cert.issuer }}</p>
+                  {% if cert.score %}<p>점수: {{ cert.score }}</p>{% endif %}
+                  <p>{{ cert.date_label }}: {{ cert.date }}</p>
+                  {% if cert.valid_until %}<p>유효기간: {{ cert.valid_until }}까지</p>{% endif %}
                 </article>
               {% endfor %}
             </section>

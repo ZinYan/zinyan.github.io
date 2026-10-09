@@ -279,6 +279,7 @@ aside .section-heading::after {
   line-height: 1.5;
 }
 
+.certifications-section .section-heading,
 .education-section .section-heading,
 .languages-section .section-heading {
   display: block;
@@ -289,6 +290,8 @@ aside .section-heading::after {
   text-align: left;
 }
 
+.certifications-section .section-heading::before,
+.certifications-section .section-heading::after,
 .education-section .section-heading::before,
 .education-section .section-heading::after,
 .languages-section .section-heading::before,
@@ -782,4 +785,12 @@ blockquote {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
+}
+
+.certification-item { margin-bottom: 1.25rem; }
+.certification-item h3 { margin: 0 0 0.35rem; }
+.certification-item p { margin: 0.2rem 0; color: #687386; font-size: 0.875rem; }
+
+.project-videos figure.project-video-wide {
+  width: 100%;
 }

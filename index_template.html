@@ -110,6 +110,32 @@
       <div class="container">
         <main>
 
+          {% if experience %}
+            <section class="experience-section">
+              <h2 class="section-heading">Experience</h2>
+              {% for job in experience|sort(attribute='start_date', reverse=true) %}
+                <article class="experience-item">
+                  <div class="experience-period">
+                    {{ job.start_date }}{% if job.end_date %} – {{ job.end_date }}{% else %} ~{% endif %}
+                    {% if job.duration %}<span class="duration-badge">{{ job.duration }}</span>{% endif %}
+                  </div>
+                  <div class="experience-details">
+                    <h3>
+                      {% if job.url %}<a href="{{ job.url }}">{{ job.name }}</a>{% else %}{{ job.name }}{% endif %}
+                    </h3>
+                    {% if job.type %}<p class="experience-type">{{ job.type }}</p>{% endif %}
+                    {% if job.summary %}<p>{{ job.summary }}</p>{% endif %}
+                    {% if job.highlights %}
+                      <ul>
+                        {% for highlight in job.highlights %}<li>{{ highlight }}</li>{% endfor %}
+                      </ul>
+                    {% endif %}
+                  </div>
+                </article>
+              {% endfor %}
+            </section>
+          {% endif %}
+
           {% if projects %}
             <section class="projects-section">
               <h2 class="section-heading">Projects</h2>
@@ -123,6 +149,14 @@
                     {% endif %}
                   </h3>
                   {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+                  {% if project.links %}
+                    <ul class="project-resource-links">
+                      {% for link in project.links %}
+                        <li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+
                   {% if project.highlights %}
                     <ul>
                       {% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}
@@ -166,33 +200,6 @@
                       {% endfor %}
                     </div>
                   {% endif %}
-                </article>
-              {% endfor %}
-            </section>
-          {% endif %}
-
-          {% if 
-            experience %}
-            <section class="experience-section">
-              <h2 class="section-heading">Experience</h2>
-              {% for job in experience|sort(attribute='start_date', reverse=true) %}
-                <article class="experience-item">
-                  <div class="experience-period">
-                    {{ job.start_date }}{% if job.end_date %} – {{ job.end_date }}{% else %} ~{% endif %}
-                    {% if job.duration %}<span class="duration-badge">{{ job.duration }}</span>{% endif %}
-                  </div>
-                  <div class="experience-details">
-                    <h3>
-                      {% if job.url %}<a href="{{ job.url }}">{{ job.name }}</a>{% else %}{{ job.name }}{% endif %}
-                    </h3>
-                    {% if job.type %}<p class="experience-type">{{ job.type }}</p>{% endif %}
-                    {% if job.summary %}<p>{{ job.summary }}</p>{% endif %}
-                    {% if job.highlights %}
-                      <ul>
-                        {% for highlight in job.highlights %}<li>{{ highlight }}</li>{% endfor %}
-                      </ul>
-                    {% endif %}
-                  </div>
                 </article>
               {% endfor %}
             </section>

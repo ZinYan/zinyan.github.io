@@ -126,6 +126,14 @@
                     {% endif %}
                   </h3>
                   {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+                  {% if project.links %}
+                    <ul class="project-resource-links">
+                      {% for link in project.links %}
+                        <li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+
                   {% if project.highlights %}
                     <ul>
                       {% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}

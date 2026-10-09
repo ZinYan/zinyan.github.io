@@ -131,6 +131,12 @@
                       {% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}
                     </ul>
                   {% endif %}
+                  {% if project.contributions %}
+                    <h4>맡았던 부분</h4>
+                    <ul>
+                      {% for contribution in project.contributions %}<li>{{ contribution }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
                 </section>
               {% endfor %}
             </section>
@@ -139,6 +145,21 @@
 
         <!-- Sidebar Section -->
         <aside>
+          {% if certifications %}
+            <section class="certifications-section">
+              <h2 class="section-heading">Certifications</h2>
+              {% for cert in certifications %}
+                <article class="certification-item">
+                  <h3>{{ cert.name }}</h3>
+                  <p>{{ cert.issuer }}</p>
+                  {% if cert.score %}<p>점수: {{ cert.score }}</p>{% endif %}
+                  <p>{{ cert.date_label }}: {{ cert.date }}</p>
+                  {% if cert.valid_until %}<p>유효기간: {{ cert.valid_until }}까지</p>{% endif %}
+                </article>
+              {% endfor %}
+            </section>
+          {% endif %}
+
           {% if languages %}
             <section>
               <h2 class="section-heading">Languages</h2>
